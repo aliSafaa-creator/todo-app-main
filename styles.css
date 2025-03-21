@@ -1,0 +1,88 @@
+* {
+     margin: 0;
+     padding: 0;
+     font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+     background: linear-gradient(135deg, #1e1e2f, #3a3a5f); /* Dark gradient */
+     height: 100vh;
+     width: 100%;
+     display: grid;
+     justify-content: center;
+}
+
+.container-todos {
+     margin-top: 50px;
+}
+
+header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+header h1 {
+     font-size: 30px;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     color: #fff;
+     font-weight: 500;
+}
+
+header img {
+     width: 30px;
+     height: 30px;
+     margin-right: 10px;
+}
+
+.container-todos > input {
+     width: 100%;
+     padding: 10px;
+     font-size: 16px;
+     border: none;
+     border-radius: 5px;
+     margin: 10px 0;
+     background: hsl(237, 14%, 26%);
+     max-width: 545px;
+}
+
+.todos {
+     display: grid;
+     align-items: center;
+}
+
+.todo {
+     background: hsl(237, 14%, 26%);
+     border-bottom: 2px solid hsl(237, 13%, 30%);
+     padding: 10px;
+     display: flex;
+     align-items: center;
+}
+
+.todo > input {
+     display: none;
+}
+
+.checkmark {
+     width: 20px;
+     height: 20px;
+     border: 2px solid #ffffff;
+     display: inline-block;
+     position: relative;
+     margin-right: 10px;
+}
+
+.todo > input:checked + .checkmark::after {
+     content: "✔";
+     position: absolute;
+     left: 4px;
+     top: -2px;
+     font-size: 18px;
+     color: #aba2a2;
+}
+
+.todos > .todo > h5 {
+     font-size: 15px;
+     color: #1ebc6f;
+}
