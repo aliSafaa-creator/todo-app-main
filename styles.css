@@ -8,12 +8,14 @@
      background: linear-gradient(135deg, #1e1e2f, #3a3a5f); /* Dark gradient */
      height: 100vh;
      width: 100%;
-     display: grid;
-     justify-content: center;
 }
 
 .container-todos {
-     margin-top: 50px;
+     padding-top: 60px;
+     display: grid;
+     margin: 0 auto;
+     width: 100%;
+     max-width: 700px;
 }
 
 header {
@@ -37,14 +39,16 @@ header img {
 }
 
 .container-todos > input {
-     width: 100%;
      padding: 10px;
      font-size: 16px;
      border: none;
      border-radius: 5px;
-     margin: 10px 0;
      background: hsl(237, 14%, 26%);
-     max-width: 545px;
+     max-width: 450px;
+     width: 100%;
+     margin: 10px auto;
+     color: #73d96e;
+     outline: none;
 }
 
 .todos {
@@ -55,9 +59,10 @@ header img {
 .todo {
      background: hsl(237, 14%, 26%);
      border-bottom: 2px solid hsl(237, 13%, 30%);
-     padding: 10px;
+     padding: 20px;
      display: flex;
      align-items: center;
+     cursor: pointer;
 }
 
 .todo > input {
@@ -71,6 +76,7 @@ header img {
      display: inline-block;
      position: relative;
      margin-right: 10px;
+     cursor: pointer;
 }
 
 .todo > input:checked + .checkmark::after {
@@ -85,4 +91,44 @@ header img {
 .todos > .todo > h5 {
      font-size: 15px;
      color: #1ebc6f;
+}
+
+.tools-container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px;
+     background: hsl(237, 14%, 26%);
+}
+
+.tools-container > .items-left {
+     color: #009688;
+     font-size: 15px;
+}
+
+.filter > button {
+     background: none;
+     border: none;
+     color: #009688;
+     font-size: 15px;
+     cursor: pointer;
+     margin: 0 5px;
+     transition: 0.5s ease;
+}
+
+.filter > button:hover {
+     color: #4a90e2;
+}
+
+.tools-container > .clear {
+     color: #009688;
+     font-size: 15px;
+     cursor: pointer;
+     border: none;
+     background: transparent;
+     transition: 0.5s ease;
+}
+
+.tools-container > .clear:hover {
+     color: #4a90e2;
 }

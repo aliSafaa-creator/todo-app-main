@@ -39,30 +39,36 @@
 
                     <input type="text" placeholder="Create a new todo..." />
                     <div class="todos">
-                         <label class="todo" for="checkbox">
+                         <label class="todo" for="checkbox-1">
                               <input
                                    type="checkbox"
                                    name="checkbox"
-                                   id="checkbox"
+                                   id="checkbox-1"
+                              />
+                              <span class="checkmark"></span>
+                              <h5>complete online javascript course</h5>
+                         </label>
+
+                         <label class="todo" for="checkbox-2">
+                              <input
+                                   type="checkbox"
+                                   name="checkbox"
+                                   id="checkbox-2"
                               />
                               <span class="checkmark"></span>
                               <h5>complete online javascript course</h5>
                          </label>
                     </div>
+                    <div class="tools-container">
+                         <span class="items-left">2 items left</span>
+                         <div class="filter">
+                              <button class="all">All</button>
+                              <button class="active">Active</button>
+                              <button class="completed">Completed</button>
+                         </div>
+                         <button class="clear">Clear Completed</button>
+                    </div>
                </div>
-               <!-- todo list -->
-
-               <!-- Add dynamic number -->
-               items left
-               <!--  -->
-               All
-               <!--  -->
-               Active
-               <!--  -->
-               Completed Clear
-               <!--  -->
-               Completed Drag and drop to reorder list
-               <!-- tools -->
 
                <div class="attribution">
                     Challenge by
