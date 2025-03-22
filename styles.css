@@ -10,6 +10,10 @@
      width: 100%;
 }
 
+.light-mode .container {
+     background: linear-gradient(135deg, #a69696, #d3d2d2); /* Light gradient */
+}
+
 .container-todos {
      padding-top: 60px;
      display: grid;
@@ -32,23 +36,48 @@ header h1 {
      font-weight: 500;
 }
 
-header img {
+header .icon-sun {
      width: 30px;
      height: 30px;
      margin-right: 10px;
+     cursor: pointer;
 }
 
-.container-todos > input {
+.container-todos > .input-todo {
      padding: 10px;
-     font-size: 16px;
-     border: none;
      border-radius: 5px;
      background: hsl(237, 14%, 26%);
      max-width: 450px;
      width: 100%;
      margin: 10px auto;
+     display: flex;
+     align-items: center;
+}
+
+.input-todo > input {
+     width: 100%;
+     font-size: 16px;
+     border: none;
+     background: transparent;
      color: #73d96e;
      outline: none;
+}
+
+.input-todo > .add-icon {
+     font-size: 24px;
+     color: hsl(234, 39%, 85%);
+     cursor: pointer;
+     margin-left: 10px;
+     transition: color 0.3s ease;
+}
+
+.input-todo > .add-icon:hover {
+     color: hsl(220, 98%, 61%);
+}
+
+.light-mode .container-todos > input {
+     background: hsl(236, 33%, 92%);
+     color: hsl(235, 19%, 35%);
 }
 
 .todos {
@@ -65,6 +94,11 @@ header img {
      cursor: pointer;
 }
 
+.light-mode .todo {
+     background: hsl(236, 33%, 92%);
+     color: hsl(235, 19%, 35%);
+}
+
 .todo > input {
      display: none;
 }
@@ -77,6 +111,10 @@ header img {
      position: relative;
      margin-right: 10px;
      cursor: pointer;
+}
+
+body.light-mode .checkmark {
+     border-color: hsl(235, 19%, 35%);
 }
 
 .todo > input:checked + .checkmark::after {
@@ -131,4 +169,9 @@ header img {
 
 .tools-container > .clear:hover {
      color: #4a90e2;
+}
+
+body.light-mode {
+     background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Light gradient */
+     color: #000; /* Adjust text color for light mode */
 }

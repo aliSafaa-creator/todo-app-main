@@ -24,6 +24,10 @@
                href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
                rel="stylesheet"
           />
+          <link
+               href="https://fonts.googleapis.com/icon?family=Material+Icons"
+               rel="stylesheet"
+          />
      </head>
      <body>
           <div class="container">
@@ -32,33 +36,18 @@
                          <h1>Todo</h1>
                          <img
                               src="./images/icon-sun.svg"
-                              alt="icon-moon"
-                              class="icon-moon"
+                              alt="icon-sun"
+                              class="icon-sun"
                          />
                     </header>
-
-                    <input type="text" placeholder="Create a new todo..." />
-                    <div class="todos">
-                         <label class="todo" for="checkbox-1">
-                              <input
-                                   type="checkbox"
-                                   name="checkbox"
-                                   id="checkbox-1"
-                              />
-                              <span class="checkmark"></span>
-                              <h5>complete online javascript course</h5>
-                         </label>
-
-                         <label class="todo" for="checkbox-2">
-                              <input
-                                   type="checkbox"
-                                   name="checkbox"
-                                   id="checkbox-2"
-                              />
-                              <span class="checkmark"></span>
-                              <h5>complete online javascript course</h5>
-                         </label>
+                    <div class="input-todo">
+                         <input
+                              type="text"
+                              placeholder="Create a new todo..."
+                         />
+                         <span class="material-icons add-icon">maps_ugc</span>
                     </div>
+                    <div class="todos"></div>
                     <div class="tools-container">
                          <span class="items-left">2 items left</span>
                          <div class="filter">
