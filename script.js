@@ -1,8 +1,14 @@
 // Select the theme toggle icon
 const themeToggleIcon = document.querySelector(".icon-sun");
+const addIcon = document.querySelector(".add-icon");
+const inputTodo = document.querySelector(".input-todo input");
+const todosContainer = document.querySelector(".todos");
+const itemsLeft = document.querySelector(".items-left");
 
 // Add event listener for the theme toggle
-themeToggleIcon.addEventListener("click", () => {
+themeToggleIcon.addEventListener("click", themeToggle);
+
+function themeToggle() {
      const body = document.body;
 
      // Toggle the light-mode class on the body
@@ -14,14 +20,23 @@ themeToggleIcon.addEventListener("click", () => {
      } else {
           themeToggleIcon.src = "./images/icon-sun.svg"; // Switch to sun icon
      }
-});
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-     const addIcon = document.querySelector(".add-icon");
-     const inputTodo = document.querySelector(".input-todo input");
-     const todosContainer = document.querySelector(".todos");
+     const updateItemsLeft = () => {
+          const uncheckedTodos = todosContainer.querySelectorAll(
+               ".todo input[type='checkbox']:not(:checked)"
+          ).length;
+          console.log(uncheckedTodos);
 
-     addIcon.addEventListener("click", () => {
+          itemsLeft.textContent = `${uncheckedTodos} item${
+               uncheckedTodos !== 1 && uncheckedTodos !== 0 ? "s" : ""
+          } left`;
+     };
+
+     addIcon.addEventListener("click", createDynamicTodo);
+
+     function createDynamicTodo() {
           const inputValue = inputTodo.value.trim();
 
           if (inputValue) {
@@ -52,6 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                // Clear the input field
                inputTodo.value = "";
+
+               // Update the items left count
+               updateItemsLeft();
+
+               // Add event listener to update count when checkbox is toggled
+               checkbox.addEventListener("change", updateItemsLeft);
           }
-     });
+     }
+
+     // Initial update for items left
+     updateItemsLeft();
 });
