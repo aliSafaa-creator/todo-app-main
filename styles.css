@@ -175,3 +175,15 @@ body.light-mode {
      background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Light gradient */
      color: #000; /* Adjust text color for light mode */
 }
+
+.attribution {
+     font-size: 13px;
+     text-align: center;
+     color: #fff;
+     margin-top: 20px;
+}
+
+.attribution a {
+     color: #fff;
+     /* text-decoration: none; */
+}
